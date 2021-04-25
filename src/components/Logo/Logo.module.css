@@ -1,0 +1,10 @@
+.headerLogo {
+  fill: #fff;
+}
+.headerLock {
+  transition: fill 250ms;
+}
+
+.headerLogo:hover .headerLock {
+  fill: #e5a8e3;
+}
