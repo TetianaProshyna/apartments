@@ -1,3 +1,6 @@
 :root {
-  --main-color: #7455b1;
+  --main-color: rgb(201, 151, 144);
+  --accent-color: #8a615c;
+  --shadow: rgba(231, 146, 135, 0.25);
+  --shadow-hover: rgba(231, 146, 135, 0.74);
 }

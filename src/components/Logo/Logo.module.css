@@ -6,5 +6,5 @@
 }
 
 .headerLogo:hover .headerLock {
-  fill: #e5a8e3;
+  fill: var(--accent-color);
 }
