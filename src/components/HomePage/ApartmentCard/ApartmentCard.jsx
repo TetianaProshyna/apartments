@@ -9,14 +9,14 @@ const Rating = ({ value }) => {
 
   return <div className={styles.rating}>Rating: {stars}</div>;
 };
-const ApartmentCard = ({ title, descr, imgUrl, rating }) => {
+const ApartmentCard = ({ id, title, descr, imgUrl, rating, onClick }) => {
   return (
     <div className={styles.card}>
       <img className={styles.img} src={imgUrl} alt="apartments view" />
       {rating ? <Rating value={rating} /> : <p>Rating: n/a</p>}
       <h2>{title}</h2>
       <p>{descr}</p>
-      <Button>Click me</Button>
+      <Button onClick={() => onClick(id)}>Delete apartment</Button>
     </div>
   );
 };
