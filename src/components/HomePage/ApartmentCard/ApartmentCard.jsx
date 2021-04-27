@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Button from "../../UI/Button";
 import styles from "./ApartmentCard.module.css";
 const Rating = ({ value }) => {
@@ -20,4 +21,14 @@ const ApartmentCard = ({ id, title, descr, imgUrl, rating, onClick }) => {
     </div>
   );
 };
+ApartmentCard.defaultProps = {
+  imgUrl:
+    "https://res.cloudinary.com/kyoo/image/upload/v1609344654/booking/apartment-20_zwqzt4.jpg",
+};
+ApartmentCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
 export default ApartmentCard;

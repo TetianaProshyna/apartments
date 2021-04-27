@@ -7,6 +7,7 @@ import ApartmentList from "./components/HomePage/ApartmentList";
 import apartments from "./apartments.json";
 import Button from "./components/UI/Button";
 import Modal from "./components/UI/Modal";
+import FormModal from "./components/HomePage/FormModal";
 
 class App extends Component {
   state = {
@@ -15,16 +16,30 @@ class App extends Component {
     apartments: apartments,
     showModal: false,
   };
+  componentDidMount() {
+    const ap = localStorage.getItem("ap");
+    const parsedAp = JSON.parse(ap);
+
+    if (parsedAp) {
+      this.setState({ apartments: parsedAp });
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    const nextAp = this.state.apartments;
+    const prevAp = prevState.apartments;
+    if (nextAp !== prevAp) {
+      localStorage.setItem("ap", JSON.stringify(nextAp));
+    }
+  }
   toggleModal = () => {
     this.setState(({ showModal }) => ({
       showModal: !showModal,
     }));
   };
-  addApartment = ({ title, imgUrl, descr, rating, price }) => {
+  addApartment = ({ title, descr, rating, price }) => {
     const newApartment = {
       id: shortId.generate(),
       title,
-      imgUrl,
       descr,
       rating,
       price,
@@ -32,6 +47,7 @@ class App extends Component {
     this.setState(({ apartments }) => ({
       apartments: [newApartment, ...apartments],
     }));
+    this.toggleModal();
   };
   deleteById = (id) => {
     const newApartments = this.state.apartments.filter((el) => el.id !== id);
@@ -69,8 +85,11 @@ class App extends Component {
             Add appartment
           </Button>
           {this.state.showModal && (
-            <Modal>
-              <Button onClick={this.toggleModal}>Close</Button>
+            <Modal onClose={this.toggleModal}>
+              <Button className={"crossBtn"} onClick={this.toggleModal}>
+                X
+              </Button>
+              <FormModal onSubmit={this.addApartment} />
             </Modal>
           )}
           <SearchBar

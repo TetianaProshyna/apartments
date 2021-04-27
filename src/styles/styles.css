@@ -18,3 +18,7 @@ ul {
   margin-right: auto;
   margin-top: 25px;
 }
+.crossBtn {
+  display: block;
+  margin-left: auto;
+}

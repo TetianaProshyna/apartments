@@ -1,0 +1,30 @@
+.form {
+  padding: 50px;
+}
+.input {
+  display: block;
+  width: 380px;
+  margin-bottom: 20px;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.textarea {
+  display: block;
+  width: 380px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid var(--main-color);
+  color: #000;
+  padding: 8px 5px;
+  background: none;
+}
+.textarea:focus,
+.textarea:hover {
+  outline: none;
+  border: 2px solid var(--main-color);
+  padding: 7px 4px;
+}

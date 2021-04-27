@@ -1,14 +1,28 @@
 import styles from "./Input.module.css";
-const Input = ({ type = "text", value, className, placeHolder, onChange }) => {
+const Input = ({
+  name,
+  type = "text",
+  value,
+  className,
+  placeholder,
+  min,
+  max,
+  onChange,
+  required,
+}) => {
   const classList = [styles.input, className].join(" ");
 
   return (
     <input
+      name={name}
       onChange={onChange}
       type={type}
       value={value}
       className={classList}
-      placeholder={placeHolder}
+      placeholder={placeholder}
+      min={min}
+      max={max}
+      required={required}
     />
   );
 };
