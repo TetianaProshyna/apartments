@@ -11,8 +11,7 @@ import FormModal from "./components/HomePage/FormModal";
 
 class App extends Component {
   state = {
-    query: "",
-    filter: "",
+    searchQuery: "",
     apartments: apartments,
     showModal: false,
   };
@@ -55,21 +54,13 @@ class App extends Component {
       apartments: newApartments,
     });
   };
-
-  handleInputChange = (event) => {
-    this.setState({
-      query: event.currentTarget.value,
-    });
-  };
-  handleSearchBtnClick = () => {
-    this.setState({
-      filter: this.state.query,
-    });
+  onSearchSubmit = (query) => {
+    this.setState({ searchQuery: query });
   };
   getCurrentApartments = () => {
-    const { filter, apartments } = this.state;
-    const normalizedFilter = filter.toLowerCase();
-    if (filter) {
+    const { searchQuery, apartments } = this.state;
+    const normalizedFilter = searchQuery.toLowerCase();
+    if (searchQuery) {
       return apartments.filter((el) =>
         el.title.toLowerCase().includes(normalizedFilter)
       );
@@ -92,10 +83,7 @@ class App extends Component {
               <FormModal onSubmit={this.addApartment} />
             </Modal>
           )}
-          <SearchBar
-            onClick={this.handleSearchBtnClick}
-            onChange={this.handleInputChange}
-          />
+          <SearchBar onSubmit={this.onSearchSubmit} />
           <ApartmentList
             onClick={this.deleteById}
             items={this.getCurrentApartments()}

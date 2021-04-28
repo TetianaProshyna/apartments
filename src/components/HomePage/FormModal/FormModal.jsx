@@ -4,6 +4,10 @@ import Input from "../../UI/Input";
 import styles from "./FormModal.module.css";
 
 class FormModal extends Component {
+  state = {
+    title: "",
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -11,7 +15,6 @@ class FormModal extends Component {
     formData.forEach((value, name) => {
       data[name] = value;
     });
-    console.log(data);
     this.props.onSubmit(data);
   };
 

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/apartments/static/css/main.2f616c8c.chunk.css",
-    "main.js": "/apartments/static/js/main.b92b52be.chunk.js",
-    "main.js.map": "/apartments/static/js/main.b92b52be.chunk.js.map",
+    "main.css": "/apartments/static/css/main.e806e774.chunk.css",
+    "main.js": "/apartments/static/js/main.901de426.chunk.js",
+    "main.js.map": "/apartments/static/js/main.901de426.chunk.js.map",
     "runtime-main.js": "/apartments/static/js/runtime-main.8bc5cab7.js",
     "runtime-main.js.map": "/apartments/static/js/runtime-main.8bc5cab7.js.map",
     "static/css/2.de71bbd8.chunk.css": "/apartments/static/css/2.de71bbd8.chunk.css",
-    "static/js/2.77f1c1b8.chunk.js": "/apartments/static/js/2.77f1c1b8.chunk.js",
-    "static/js/2.77f1c1b8.chunk.js.map": "/apartments/static/js/2.77f1c1b8.chunk.js.map",
+    "static/js/2.1ce13526.chunk.js": "/apartments/static/js/2.1ce13526.chunk.js",
+    "static/js/2.1ce13526.chunk.js.map": "/apartments/static/js/2.1ce13526.chunk.js.map",
     "index.html": "/apartments/index.html",
     "static/css/2.de71bbd8.chunk.css.map": "/apartments/static/css/2.de71bbd8.chunk.css.map",
-    "static/css/main.2f616c8c.chunk.css.map": "/apartments/static/css/main.2f616c8c.chunk.css.map",
-    "static/js/2.77f1c1b8.chunk.js.LICENSE.txt": "/apartments/static/js/2.77f1c1b8.chunk.js.LICENSE.txt"
+    "static/css/main.e806e774.chunk.css.map": "/apartments/static/css/main.e806e774.chunk.css.map",
+    "static/js/2.1ce13526.chunk.js.LICENSE.txt": "/apartments/static/js/2.1ce13526.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8bc5cab7.js",
     "static/css/2.de71bbd8.chunk.css",
-    "static/js/2.77f1c1b8.chunk.js",
-    "static/css/main.2f616c8c.chunk.css",
-    "static/js/main.b92b52be.chunk.js"
+    "static/js/2.1ce13526.chunk.js",
+    "static/css/main.e806e774.chunk.css",
+    "static/js/main.901de426.chunk.js"
   ]
 }
