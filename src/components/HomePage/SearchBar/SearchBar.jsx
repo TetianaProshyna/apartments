@@ -2,6 +2,7 @@ import { Component } from "react";
 import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import styles from "./SearchBar.module.css";
+import search from "../../../img/search.svg";
 
 class SearchBar extends Component {
   state = {
@@ -27,7 +28,12 @@ class SearchBar extends Component {
           onChange={this.handleInputChange}
           className={styles.input}
         />
-        <Button type={"submit"} className={styles.button}>
+        <Button
+          data-decorate="true"
+          data-icon={search}
+          type={"submit"}
+          className={styles.button}
+        >
           Search
         </Button>
       </form>

@@ -8,7 +8,8 @@ import apartments from "./apartments.json";
 import Button from "./components/UI/Button";
 import Modal from "./components/UI/Modal";
 import FormModal from "./components/HomePage/FormModal";
-
+import MouseDecorator from "./components/MouseDecorator/MouseDecorator";
+import plus from "./img/plus.svg";
 class App extends Component {
   state = {
     searchQuery: "",
@@ -72,7 +73,13 @@ class App extends Component {
       <div className="App">
         <Header />
         <Container>
-          <Button onClick={this.toggleModal} className={"addBtn"}>
+          <MouseDecorator />
+          <Button
+            data-decorate="true"
+            data-icon={plus}
+            onClick={this.toggleModal}
+            className={"addBtn"}
+          >
             Add appartment
           </Button>
           {this.state.showModal && (
