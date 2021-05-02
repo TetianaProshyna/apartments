@@ -24,7 +24,6 @@ class MouseDecorator extends Component {
       return;
     }
     const imgSrc = target.dataset.icon;
-    console.log(imgSrc);
 
     this.setState({
       x: clientX,
