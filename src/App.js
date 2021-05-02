@@ -84,11 +84,7 @@ class App extends Component {
           </Button>
           {this.state.showModal && (
             <Modal onClose={this.toggleModal}>
-              <Button
-                autoFocus={true}
-                className={"crossBtn"}
-                onClick={this.toggleModal}
-              >
+              <Button className={"crossBtn"} onClick={this.toggleModal}>
                 X
               </Button>
               <FormModal onSubmit={this.addApartment} />

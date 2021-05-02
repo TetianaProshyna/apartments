@@ -1,10 +1,15 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
 
 const modalRoot = document.querySelector("#modal-root");
 
 class Modal extends Component {
+  focusRef = React.createRef();
+  componentDidMount() {
+    this.focusRef.current.focus();
+  }
+
   handleKeyDown = (event) => {
     if (event.code === "Escape") {
       this.props.onClose();
@@ -20,6 +25,7 @@ class Modal extends Component {
     return createPortal(
       <div className={styles.ModalBackdrop} onClick={this.handleBackdropClick}>
         <div
+          ref={this.focusRef}
           tabIndex={0}
           onKeyDown={this.handleKeyDown}
           className={styles.ModalContent}
